@@ -123,17 +123,3 @@ libraryContainer.addEventListener("click", (event) => {
         displayBooks();
     }
 });
-
-addBookToLibrary(
-    "The Hobbit",
-    "J.R.R. Tolkien",
-    310,
-    true
-);
-
-addBookToLibrary(
-    "Dune",
-    "Frank Herbert",
-    412,
-    false
-);
