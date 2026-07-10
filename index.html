@@ -3,24 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+    <title>My Library</title>
 </head>
+
 <body>
     <header>
-        <!--Tittle-->
         <h1>My Library</h1>
-        <!--Add new book button-->
-        <button id="newBookBtn">Add New Book</button>
+        <button id="new-book-button" type="button">Add New Book</button>
     </header>
+
     <main>
+        <div class="book-container" id="library-container"></div>
+    </main>
 
-<!-- books container -->
- <div class="book-container"></div>
+    <dialog id="book-dialog">
+        <form id="add-book-form">
+            <h2>Add a new book</h2>
 
-</main>
-    
-    <script src="script.js"></script>
+            <label for="title">Title</label>
+            <input
+                id="title"
+                name="title"
+                type="text"
+                placeholder="Book title"
+                required
+            >
+
+            <label for="author">Author</label>
+            <input
+                id="author"
+                name="author"
+                type="text"
+                placeholder="Author"
+                required
+            >
+
+            <label for="pages">Number of pages</label>
+            <input
+                id="pages"
+                name="pages"
+                type="number"
+                placeholder="Pages"
+                min="1"
+                required
+            >
+
+            <label>
+                <input id="read" name="read" type="checkbox">
+                I have read this book
+            </label>
+
+            <div class="form-buttons">
+                <button type="submit">Add Book</button>
+                <button id="cancel-button" type="button">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
